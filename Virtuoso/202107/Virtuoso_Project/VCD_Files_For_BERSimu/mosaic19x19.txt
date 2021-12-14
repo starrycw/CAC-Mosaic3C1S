@@ -1,0 +1,7 @@
+.alias *[*] *<*>
+.scope Gen_vcd
+.in Mdref[279:0] Mdsend[279:0]
+.tfall 100p
+.trise 100p
+.vih 1.2
+.vil 0

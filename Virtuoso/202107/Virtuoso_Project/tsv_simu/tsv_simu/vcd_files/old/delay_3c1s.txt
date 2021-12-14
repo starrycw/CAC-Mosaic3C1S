@@ -1,0 +1,7 @@
+.alias *[*] *<*>
+.scope tb_delay_3c1s_6x6
+.in data[26:0]  
+.tfall 50p
+.trise 50p
+.vih 1.2
+.vil 0

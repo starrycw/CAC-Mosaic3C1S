@@ -1,0 +1,7 @@
+.alias *[*] *<*>
+.scope genrandom_36
+.in data[35:0]
+.tfall 10
+.trise 10
+.vih 1.2
+.vil 0

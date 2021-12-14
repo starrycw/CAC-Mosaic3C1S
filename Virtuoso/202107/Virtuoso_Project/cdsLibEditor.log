@@ -1,0 +1,47 @@
+\o Program:		@(#)$CDS: cdsLibEditor version 6.1.7 - CAT35 10/18/2015 00:07 (sjfnl678) $
+\o Sub version:		sub-version  p009 
+\o Arguments:		-display :8 -mpssession virtuoso51162 -mpshost server315 -namespace CDBA -cdslib /eda/home/wc/Projects/Virtuoso/Virtuoso_Project/cds.lib 
+\o Working Directory:	server315:/eda/home/wc/Projects/Virtuoso/Virtuoso_Project
+\o 64-bit offsets
+\a nrSetWindowVisibility(cdsLibEditor "show")
+\o Qt version: 		4.8.5
+\a nrSetCurrentWindow(cdsLibEditor)
+\a nrListItemAction(cdsLibEditor->mainTable 0 0)
+\o Active cell: 0 0 "cdsDefTechLib"
+\a nrResizeWindow(cdsLibEditor list(40 70 500 400))
+\a cdsLibEditor->editAddLibButton->value = t
+\a newLibraryDialog->filePathComboBox->value = "/eda/home/wc/Projects/Virtuoso/Virtuoso_Project"
+\a newLibraryDialog->useMappedName->value = nil
+\a nrSetWindowVisibility(newLibraryDialog "show")
+\a nrSetCurrentWindow(newLibraryDialog)
+\a nrResizeWindow(newLibraryDialog list(25 27 531 513))
+\a newLibraryDialog->dirListWidget->value = "tsv_simu"
+\a newLibraryDialog->filePathComboBox->value = "/eda/home/wc/Projects/Virtuoso/Virtuoso_Project/tsv_simu"
+\a nrListItemAction(newLibraryDialog->dirListWidget 5 0)
+\a newLibraryDialog->dirListWidget->value = nil
+\a newLibraryDialog->dirListWidget->value = "tsv_simu"
+\a newLibraryDialog->filePathComboBox->value = "/eda/home/wc/Projects/Virtuoso/Virtuoso_Project/tsv_simu/tsv_simu"
+\a nrListItemAction(newLibraryDialog->dirListWidget 1 0)
+\a newLibraryDialog->dirListWidget->value = nil
+\a newLibraryDialog->dirListWidget->value = "smic 65nm"
+\a newLibraryDialog->filePathComboBox->value = "/eda/home/wc/Projects/Virtuoso/Virtuoso_Project/tsv_simu/tsv_simu/smic 65nm"
+\a nrListItemAction(newLibraryDialog->dirListWidget 1 0)
+\a newLibraryDialog->dirListWidget->value = nil
+\a newLibraryDialog->dirListWidget->value = "smic65llrf_121825_2tm_cds_1P10M_2010_3_9_0.4.1"
+\a newLibraryDialog->filePathComboBox->value = "/eda/home/wc/Projects/Virtuoso/Virtuoso_Project/tsv_simu/tsv_simu/smic 65nm/smic65llrf_121825_2tm_cds_1P10M_2010_3_9_0.4.1"
+\a nrListItemAction(newLibraryDialog->dirListWidget 1 0)
+\a newLibraryDialog->dirListWidget->value = nil
+\a newLibraryDialog->libraryListBox->value = "smic65_OA"
+\a newLibraryDialog->useMappedName->value = t
+\a newLibraryDialog->libraryName->value = "smic65_OA"
+\a newLibraryDialog->okButton->value = t
+\a newLibraryDialog->libraryListBox->value = nil
+\a newLibraryDialog->useMappedName->value = nil
+\a newLibraryDialog->libraryName->value = ""
+\a nrListItemAction(cdsLibEditor->mainTable 14 0)
+\o Active cell: 14 0 ""
+\a nrSetCurrentWindow(cdsLibEditor)
+\a cdsLibEditor->fileSaveButton->value = t
+\a cdsLibEditor->fileExitButton->value = t
+\a nrSetWindowVisibility(cdsLibEditor "hide")
+\a exit(0)

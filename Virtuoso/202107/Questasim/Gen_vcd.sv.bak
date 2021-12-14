@@ -1,0 +1,111 @@
+`timescale 1ns / 1ps  
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 2021/01/13 14:40:00
+// Design Name: 
+// Module Name: Gen_vcd
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: Generating VCD files for Virtuoso ADE. 
+//              For simulation of 13x13 Mosaic-3C1S BER.
+//              Edit the first line (`timescale) and delay (#1) to change the frequency.
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+`include "TNS.v"
+module Gen_vcd();
+    reg mainclk;
+    reg [255:0] gen_data;
+    reg [255:0] dsend;  // 
+    reg [255:0] dref;
+
+    
+    reg [279:0] Mdsend;  //M: Mosaic-3C1S, 18x18 -> 243(TNS-CAC) + 37(uncoded)
+    reg [279:0] Mdref;
+    
+    wire [239:0] Mcodeword;  //240-bit TNS-CAC
+    reg [239:0] McodewordX;  //240-bit TNS-CAC WITHOUT X
+    wire [219:0] Mdataword; //220-bit data to be encoded
+    wire [35:0] Muncoded; //36-bit uncoded data
+
+    
+    //////////Codeword generation
+    encoder_3c1s_18x18 encoder1(.datain(Mdataword), .clock(mainclk), .codeout(Mcodeword));
+
+    assign Mdataword[219:0] = gen_data[219:0];
+    assign Muncoded[35:0] = gen_data[255:220];
+
+    ////////// Convert x to 0
+    integer k;
+
+    initial begin
+        McodewordX = 0;
+    end
+
+    always @(*) begin
+        McodewordX[239:0] = Mcodeword[239:0];
+    end
+
+
+    ////////// Random data generation
+    integer i, j;
+
+    initial begin
+        mainclk = 0;
+        gen_data = 0;
+
+        #0.5;  /////////////////////////////////////////////////////////////////////////////EDIT01
+        mainclk = 1;
+
+        #0.5;  /////////////////////////////////////////////////////////////////////////////EDIT02
+        for (i = 0; i < 5001; i++) begin
+            #0.5;  /////////////////////////////////////////////////////////////////////////EDIT03
+            mainclk = 0;
+
+            for(j=0; j<256; j++) begin
+                gen_data[j] <= {$random} % 2;
+            end
+
+            #0.5;  //////////////////////////////////////////////////////////////////////////EDIT04
+            mainclk = 1;
+        end
+    end
+
+    //////////Output generation
+    initial begin
+        dref <= 0;
+        
+        dsend <= 0;
+
+        Mdref <= 0;
+     
+        Mdsend <= 0;
+
+    end
+
+    always @(negedge mainclk) begin
+        dsend <= gen_data;
+        dref <= gen_data;
+
+        Mdsend[239:0] <= McodewordX[239:0];
+        Mdsend[242:240] <= 0;
+        Mdsend[278:243] <= Muncoded[35:0];
+        Mdsend[279] <= 0;
+
+        Mdref[239:0] <= McodewordX[239:0];
+        Mdref[242:240] <= 0;
+        Mdref[278:243] <= Muncoded[35:0];
+        Mdref[279] <= 0;
+    end
+
+
+endmodule

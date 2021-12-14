@@ -1,0 +1,7 @@
+.alias *[*] *<*>
+.scope Gen_vcd
+.in data_c[131:0]
+.tfall 10
+.trise 10
+.vih 1.2
+.vil 0

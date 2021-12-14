@@ -1,0 +1,12 @@
+# File Created by wc at Tue Dec 14 17:51:11 2021
+# assisted by CdsLibEditor
+SOFTINCLUDE /eda/cadence/IC617/share/cdssetup/dfII/cds.lib
+SOFTINCLUDE /eda/cadence/IC617/share/cdssetup/hdl/cds.lib
+SOFTINCLUDE /eda/cadence/IC617/share/cdssetup/pic/cds.lib
+SOFTINCLUDE /eda/cadence/IC617/share/cdssetup/sg/cds.lib
+DEFINE BER_simu BER_simu/BER_simu
+DEFINE tsv_simu tsv_simu/tsv_simu/tsv_simu
+DEFINE verilog_test verilog_test/verilog_test
+DEFINE BER_ahdlLib BER_ahdlLib/BER_ahdlLib
+DEFINE tsmcN65 tsmc65/tsmc65/tsmcN65
+DEFINE smic65_OA "tsv_simu/tsv_simu/smic 65nm/smic65llrf_121825_2tm_cds_1P10M_2010_3_9_0.4.1/smic65_OA"

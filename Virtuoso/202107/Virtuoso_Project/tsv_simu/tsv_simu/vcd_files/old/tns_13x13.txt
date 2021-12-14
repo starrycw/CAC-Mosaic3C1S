@@ -1,0 +1,7 @@
+.alias *[*] *<*>
+.scope Gen_TNS108_Random25
+.in data[107:0] udata[24:0]
+.tfall 10
+.trise 10
+.vih 1.2
+.vil 0

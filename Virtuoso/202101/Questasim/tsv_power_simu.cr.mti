@@ -1,0 +1,25 @@
+E:/Workspace/Projects/Questasim/tsv_power_simu/TNS.v {1 {vlog -work work -vopt -stats=none E:/Workspace/Projects/Questasim/tsv_power_simu/TNS.v
+QuestaSim-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+
+} {} {}} E:/Workspace/Projects/Questasim/tsv_power_simu/Gen_vcd.sv {1 {vlog -work work -vopt -sv -stats=none E:/Workspace/Projects/Questasim/tsv_power_simu/Gen_vcd.sv
+QuestaSim-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+-- Compiling module Gen_vcd
+
+Top level modules:
+	Gen_vcd
+
+} {} {}} E:/Workspace/Projects/Questasim/tsv_power_simu/encoder_3c1s_12x12.v {1 {vlog -work work -vopt -stats=none E:/Workspace/Projects/Questasim/tsv_power_simu/encoder_3c1s_12x12.v
+QuestaSim-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+-- Compiling module encoder_3c1s_12x12
+
+Top level modules:
+	encoder_3c1s_12x12
+
+} {} {}} E:/Workspace/Projects/Questasim/tsv_power_simu/TNS_encoder_12.v {1 {vlog -work work -vopt -stats=none E:/Workspace/Projects/Questasim/tsv_power_simu/TNS_encoder_12.v
+QuestaSim-64 vlog 2020.1 Compiler 2020.01 Jan 28 2020
+-- Compiling module TNS_encoder_12
+
+Top level modules:
+	TNS_encoder_12
+
+} {} {}}
